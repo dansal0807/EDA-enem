@@ -1,0 +1,15 @@
+                           Tópicos História         Tópicos Filosofia                          Tópicos Sociologia
+0                       Idade Contemporânea           Ética e justiça                           Mundo do trabalho
+1                            Brasil Colônia          Filosofia antiga                Cultura e indústria cultural
+2                            Brasil Império   Filosofia contemporânea                                   Ideologia
+3                         História política  Natureza do conhecimento  comunicação, tecnologia e cultura de massa
+4   Patrimônio histórico-cultural e memória         Filosofia moderna                                   Cidadania
+5                        Primeira República         Relações de poder                          Movimentos sociais
+6                             Idade Moderna        Filosofia medieval                        Identidade de gênero
+7                              Idade Antiga   Surgimento da Filosofia                       Desigualdades sociais
+8                       Identidade cultural              Intolerância          Organização científica do trabalho
+9                               Idade Média                         x               Conflito de terra e violência
+10                         Brasil República                         x                                           x
+11                             Antropologia                         x                                           x
+12                         Direitos humanos                         x                                           x
+13                         Questão indígena                         x                                           x

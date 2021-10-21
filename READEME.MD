@@ -1,0 +1,1 @@
+Projeto desenvolvido para análise de dados das provas de humanidades do ENEM de 2009 a 2021 com o intuito de entender qual a forma mais eficiente de focar os tópicos da seção de ciências humanas da prova por um ponto de vista estatístico.
