@@ -61,7 +61,7 @@ if not os.path.exists('datasets'):
 
 os.chdir('datasets')
 
-#primeiro data set feito só de tópicos
+#primeiro data set feito só de tópicos:
 dataset_topics = {'Tópicos História': topicos_hist, 'Tópicos Filosofia': topicos_filo, 'Tópicos Sociologia': topicos_socio}
 
 for i in range(len(topicos_hist)):
@@ -79,13 +79,37 @@ with open('topicos ordenados.txt', 'w') as topicstxt:
 
 #Data set e porcentagens dos tópicos de história:
 
-for quests in quests_per_hist:
-    quests = str(quests) + '%'
-    quests_per_hist.append(quests)
-
-dataset_topics_hist = {'questões (numeros inteiros)': quests_inteiras_hist, 'questões (porcentagem)': quests_per_hist}
+dataset_topics_hist = {'questões (numeros inteiros)': quests_inteiras_hist, 'questões em %': quests_per_hist}
 
 df_hist = pd.DataFrame(dataset_topics_hist, index = topicos_hist)
 
 with open('estatisticas de história.txt', 'w') as topicstxt:
     topicstxt.write(str(df_hist))
+
+#Data set e porcentagens dos tópicos de filosofia:
+
+dataset_topics_filo = {'questões (numeros inteiros)': quests_inteiras_filo, 'questões em %': quests_per_filo}
+
+#Como foi necessário equiparar os topicos de historia, filosofia e sociologia, agora preciso corrigir esse erro:
+for topicos in topicos_filo:
+    if 'x' in topicos_filo:
+        topicos_filo.remove('x')
+
+df_filo = pd.DataFrame(dataset_topics_filo, index=topicos_filo)
+
+with open('estatisticas de filosofia.txt', 'w') as topicstxt:
+    topicstxt.write(str(df_filo))
+
+#Data set e porcentagens dos tópicos de sociologia:
+
+dataset_topics_socio = {'questões (numeros inteiros)': quests_inteiras_socio, 'questões em %': quests_per_socio}
+
+#Como foi necessário equiparar os topicos de historia, filosofia e sociologia, agora preciso corrigir esse erro:
+for topicos in topicos_socio:
+    if 'x' in topicos_socio:
+        topicos_socio.remove('x')
+
+df_socio = pd.DataFrame(dataset_topics_socio, index=topicos_socio)
+
+with open('estatisticas de sociologia.txt', 'w') as topicstxt:
+    topicstxt.write(str(df_socio))
