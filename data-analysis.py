@@ -55,7 +55,7 @@ quests_per_socio = []
 for i in range(len(topicos_hist) + len(topicos_filo) + 1, len(quests_inteiras)):
     quests_per_socio.append(quests_per[i])
 
-#criando o data frame:
+#criando o diretório do data frame:
 if not os.path.exists('datasets'):
     os.mkdir('datasets')
 
@@ -73,6 +73,7 @@ for i in range(len(topicos_hist)):
 
 df_topics = pd.DataFrame(dataset_topics)
 
+df_topics.to_csv("tópicos ordenados.csv")
 
 with open('topicos ordenados.txt', 'w') as topicstxt:
     topicstxt.write(str(df_topics))
@@ -82,6 +83,8 @@ with open('topicos ordenados.txt', 'w') as topicstxt:
 dataset_topics_hist = {'questões (numeros inteiros)': quests_inteiras_hist, 'questões em %': quests_per_hist}
 
 df_hist = pd.DataFrame(dataset_topics_hist, index = topicos_hist)
+
+df_hist.to_csv("tópicos de história.csv")
 
 with open('estatisticas de história.txt', 'w') as topicstxt:
     topicstxt.write(str(df_hist))
@@ -97,6 +100,8 @@ for topicos in topicos_filo:
 
 df_filo = pd.DataFrame(dataset_topics_filo, index=topicos_filo)
 
+df_filo.to_csv("tópicos de filosofia.csv")
+
 with open('estatisticas de filosofia.txt', 'w') as topicstxt:
     topicstxt.write(str(df_filo))
 
@@ -110,6 +115,8 @@ for topicos in topicos_socio:
         topicos_socio.remove('x')
 
 df_socio = pd.DataFrame(dataset_topics_socio, index=topicos_socio)
+
+df_socio.to_csv("tópicos de sociologia.csv")
 
 with open('estatisticas de sociologia.txt', 'w') as topicstxt:
     topicstxt.write(str(df_socio))
