@@ -1,0 +1,10 @@
+       Tópicos de filosofia  Dias para cada Tópicos
+0           Ética e justiça                     8.0
+1          Filosofia antiga                     6.0
+2   Filosofia contemporânea                     5.0
+3  Natureza do conhecimento                     4.0
+4         Filosofia moderna                     3.0
+5         Relações de poder                     3.0
+6        Filosofia medieval                     3.0
+7   Surgimento da Filosofia                     3.0
+8              Intolerância                     2.0

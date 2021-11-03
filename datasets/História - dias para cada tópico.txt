@@ -1,0 +1,15 @@
+                        Tópicos de História  Dias para cada Tópicos
+0                       Idade Contemporânea                     8.0
+1                            Brasil Colônia                     6.0
+2                            Brasil Império                     5.0
+3                         História política                     4.0
+4   Patrimônio histórico-cultural e memória                     3.0
+5                        Primeira República                     3.0
+6                             Idade Moderna                     3.0
+7                              Idade Antiga                     3.0
+8                       Identidade cultural                     2.0
+9                               Idade Média                     2.0
+10                         Brasil República                     2.0
+11                             Antropologia                     1.0
+12                         Direitos humanos                     1.0
+13                         Questão indígena                     1.0

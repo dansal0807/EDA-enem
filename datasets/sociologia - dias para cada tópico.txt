@@ -1,0 +1,11 @@
+                        Tópicos de sociologia  Dias para cada Tópicos
+0                           Mundo do trabalho                     8.0
+1                Cultura e indústria cultural                     6.0
+2                                   Ideologia                     5.0
+3  comunicação, tecnologia e cultura de massa                     4.0
+4                                   Cidadania                     3.0
+5                          Movimentos sociais                     3.0
+6                        Identidade de gênero                     3.0
+7                       Desigualdades sociais                     3.0
+8          Organização científica do trabalho                     2.0
+9               Conflito de terra e violência                     2.0
