@@ -4,6 +4,7 @@ import holidays
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
 
 #aqui a necessidade é descobrir quantas horas de aula terei em 2022 e distribuir eles proporcionalmente entre esses horários.
 #1- descobrir quantidade de horas de aulas em 2022, lembrando que as aulas de filosofia e sociologia são juntas às segundas-feiras e as aulas de história são às terças-feiras.
@@ -79,6 +80,15 @@ sns.set_style('darkgrid')
 sns.barplot(x=vals, y=keys)
 plt.show()
 
+#produzindo um txt com os topicos de história e suas proporções:
+os.chdir('datasets')
+hist_topics = {'Tópicos de História': keys, 'Dias para cada Tópicos': vals}
+df_hist_quests = pd.DataFrame(hist_topics)
+os.chdir('..')
+
+with open('História - dias para cada tópico.txt', 'w') as topicstxt:
+    topicstxt.write(str(df_hist_quests))
+
 ##SEÇÃO DE FILOSOFIA / SOCIOLOGIA:
 df_filo = pd.read_csv("datasets/tópicos de filosofia.csv")
 questoes2_filo = df_filo['questões em %'].values.tolist()
@@ -119,10 +129,29 @@ sns.set_style('darkgrid')
 sns.barplot(x=vals, y=keys)
 plt.show()
 
+#produzindo um txt com os topicos de filosofia suas proporções:
+os.chdir('datasets')
+filo_topics = {'Tópicos de filosofia': keys, 'Dias para cada Tópicos': vals}
+df_filo_quests = pd.DataFrame(filo_topics)
+os.chdir('..')
+
+with open('filosofia - dias para cada tópico.txt', 'w') as topicstxt:
+    topicstxt.write(str(df_filo_quests))
+
+
 #transformando em uma visualização (socio):
 keys = list(proportion_socio.keys())
 vals = list(proportion_socio.values())
 sns.set_style('darkgrid')
 sns.barplot(x=vals, y=keys)
 plt.show()
+
+#produzindo um txt com os topicos de sociologia suas proporções:
+os.chdir('datasets')
+socio_topics = {'Tópicos de sociologia': keys, 'Dias para cada Tópicos': vals}
+df_socio_quests = pd.DataFrame(socio_topics)
+os.chdir('..')
+
+with open('sociologia - dias para cada tópico.txt', 'w') as topicstxt:
+    topicstxt.write(str(df_socio_quests))
 
