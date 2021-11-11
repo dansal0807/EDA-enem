@@ -44,6 +44,17 @@ for name, model in models:
 	cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy')
 	results.append(cv_results)
 	names.append(name)
-	print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
-print(results)
-print(names)
+	#print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
+
+plt.boxplot(results, labels=names)
+plt.title('Algorithm Comparison')
+plt.show()
+
+#making predictions:
+model = SVC(gamma='auto')
+model.fit(X_train, Y_train)
+predictions = model.predict(X_validation)
+
+print(accuracy_score(Y_validation, predictions))
+print(confusion_matrix(Y_validation, predictions))
+print(classification_report(Y_validation, predictions))
