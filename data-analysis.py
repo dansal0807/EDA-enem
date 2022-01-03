@@ -83,6 +83,7 @@ with open('topicos ordenados.txt', 'w') as topicstxt:
 dataset_topics_hist = {'questões (numeros inteiros)': quests_inteiras_hist, 'questões em %': quests_per_hist}
 
 df_hist = pd.DataFrame(dataset_topics_hist, index = topicos_hist)
+df_hist.rename_axis('Matérias', axis = 'columns', inplace = True)
 
 df_hist.to_csv("tópicos de história.csv")
 
@@ -99,6 +100,7 @@ for topicos in topicos_filo:
         topicos_filo.remove('x')
 
 df_filo = pd.DataFrame(dataset_topics_filo, index=topicos_filo)
+df_filo.rename_axis('Matérias', axis = 'columns', inplace = True)
 
 df_filo.to_csv("tópicos de filosofia.csv")
 
@@ -115,6 +117,7 @@ for topicos in topicos_socio:
         topicos_socio.remove('x')
 
 df_socio = pd.DataFrame(dataset_topics_socio, index=topicos_socio)
+df_socio.rename_axis('Matérias', axis = 'columns', inplace = True)
 
 df_socio.to_csv("tópicos de sociologia.csv")
 
